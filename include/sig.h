@@ -20,6 +20,13 @@
 SQISIGN_API 
 int sqisign_keypair(unsigned char *pk, unsigned char *sk);
 
+SQISIGN_API 
+int sqisign_sign_signature(unsigned char *sm,
+                 unsigned long long *smlen,
+                 const unsigned char *m,
+                 unsigned long long mlen,
+                 const unsigned char *sk);
+
 /**
  * SQIsign signature generation.
  *
@@ -80,6 +87,13 @@ int sqisign_verify(const unsigned char *m,
                    unsigned long long mlen,
                    const unsigned char *sig,
                    unsigned long long siglen,
+                   const unsigned char *pk);
+
+SQISIGN_API 
+int sqisign_sign_verify(const unsigned char *sig,
+                   unsigned long long siglen,
+                   const unsigned char *m,
+                   unsigned long long mlen,
                    const unsigned char *pk);
 
 #endif

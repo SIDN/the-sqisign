@@ -966,13 +966,17 @@
 // Namespacing symbols exported from sqisign.c:
 #undef sqisign_keypair
 #undef sqisign_open
+#undef sqisign_sign_signature
 #undef sqisign_sign
 #undef sqisign_verify
+#undef sqisign_sign_verify
 
 #define sqisign_keypair                                 SQISIGN_NAMESPACE(sqisign_keypair)
 #define sqisign_open                                    SQISIGN_NAMESPACE(sqisign_open)
+#define sqisign_sign_signature                          SQISIGN_NAMESPACE(sqisign_sign_signature)
 #define sqisign_sign                                    SQISIGN_NAMESPACE(sqisign_sign)
 #define sqisign_verify                                  SQISIGN_NAMESPACE(sqisign_verify)
+#define sqisign_sign_verify                             SQISIGN_NAMESPACE(sqisign_sign_verify)
 
 // Namespacing symbols exported from theta_isogenies.c:
 #undef theta_chain_compute_and_eval
