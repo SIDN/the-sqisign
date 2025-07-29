@@ -1,6 +1,6 @@
 #include "lll_internals.h"
 #include "quaternion_tests.h"
-#include <rng.h>
+#include <randombytes.h>
 
 int
 quat_test_lll_ibq_consts(void)

@@ -1,5 +1,5 @@
 #include "quaternion_tests.h"
-#include <rng.h>
+#include <randombytes.h>
 
 // int ibz_mat_2x2_inv_mod(ibz_mat_2x2_t *inv, const ibz_mat_2x2_t *mat, const ibz_t *m);
 int

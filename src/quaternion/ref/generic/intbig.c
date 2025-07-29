@@ -1,6 +1,6 @@
 #include "intbig_internal.h"
 #include <limits.h>
-#include <rng.h>
+#include <randombytes.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <stdarg.h>

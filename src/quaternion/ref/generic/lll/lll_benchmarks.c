@@ -1,6 +1,6 @@
 #include "lll_internals.h"
 #include "quaternion_tests.h"
-#include <rng.h>
+#include <randombytes.h>
 #include <bench.h>
 #include <bench_test_arguments.h>
 

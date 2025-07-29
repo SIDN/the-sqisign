@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <rng.h>
+#include <randombytes.h>
 #include "intbig_internal.h"
 
 // void ibz_init(ibz_t *x);

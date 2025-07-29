@@ -13,7 +13,7 @@
 #include <time.h>
 
 #include <api.h>
-#include <rng.h>
+#include <randombytes.h>
 #include <bench_test_arguments.h>
 #if defined(TARGET_BIG_ENDIAN)
 #include <tutil.h>

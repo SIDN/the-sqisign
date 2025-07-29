@@ -30,7 +30,7 @@ property. The software developed by NIST employees is not subject to copyright
 protection within the United States.
 */
 
-#include <rng.h>
+#include <randombytes.h>
 #include <string.h>
 
 #include <aes.h>
@@ -143,7 +143,7 @@ void AES256_CTR_DRBG_Update(const unsigned char *provided_data,
 
 #ifdef RANDOMBYTES_C
 SQISIGN_API
-int randombytes(unsigned char *random_array, unsigned long long nbytes) {
+int randombytes(unsigned char *random_array, size_t nbytes) {
   int ret = randombytes_nist(random_array, nbytes);
 #ifdef ENABLE_CT_TESTING
   VALGRIND_MAKE_MEM_UNDEFINED(random_array, ret);

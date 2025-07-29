@@ -7,7 +7,7 @@
 #include <signature.h>
 
 #include <tools.h>
-#include <rng.h>
+#include <randombytes.h>
 #include <bench_test_arguments.h>
 
 int

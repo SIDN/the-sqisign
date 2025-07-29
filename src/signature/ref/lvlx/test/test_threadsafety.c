@@ -4,7 +4,7 @@
 
 #include <verification.h>
 #include <signature.h>
-#include <rng.h>
+#include <randombytes.h>
 #include <bench_test_arguments.h>
 
 #include <pthread.h>

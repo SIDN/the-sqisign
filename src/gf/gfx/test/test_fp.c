@@ -3,7 +3,7 @@
 #include <time.h>
 #include <inttypes.h>
 #include "test_utils.h"
-#include <rng.h>
+#include <randombytes.h>
 #include <bench_test_arguments.h>
 
 bool

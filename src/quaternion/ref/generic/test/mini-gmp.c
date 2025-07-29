@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "mini-gmp-extra.h"
 #include "intbig_internal.h"
-#include "rng.h"
+#include "randombytes.h"
 
 #define RANDOM_TEST_ITERS 1000
 

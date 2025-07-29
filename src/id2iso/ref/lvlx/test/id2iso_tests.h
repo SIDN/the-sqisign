@@ -6,7 +6,7 @@
 #include <ec.h>
 #include <hd.h>
 #include <id2iso.h>
-#include <rng.h>
+#include <randombytes.h>
 #include <quaternion_data.h>
 #include <endomorphism_action.h>
 #include <hd_splitting_transforms.h>

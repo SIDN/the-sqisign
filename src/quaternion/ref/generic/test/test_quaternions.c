@@ -4,7 +4,7 @@
 #include <time.h>
 
 #include "quaternion_tests.h"
-#include <rng.h>
+#include <randombytes.h>
 #include <bench_test_arguments.h>
 
 // run all tests in module

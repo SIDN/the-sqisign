@@ -12,7 +12,7 @@ You are solely responsible for determining the appropriateness of using and dist
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <rng.h>
+#include <randombytes.h>
 #include <sig.h>
 #include <api.h>
 

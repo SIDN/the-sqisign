@@ -1,7 +1,7 @@
 
 #include "hnf_internal.h"
 #include "quaternion_tests.h"
-#include <rng.h>
+#include <randombytes.h>
 
 // test helper for xgcd_not_0
 
