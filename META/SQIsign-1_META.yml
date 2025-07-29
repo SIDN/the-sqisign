@@ -48,7 +48,7 @@ implementations:
   - name: broadwell
     version: "not endorsed by sqisign or liboqs authors. https://github.com/SQISign/the-sqisign round 2 with SIDN Labs' patches for liboqs"
     folder_name: .
-    compile_opts: -DENABLE_SIGN -DMINI_GMP -DGMP_LIMB_BITS=64 -DHAVE_UINT128 -DRADIX_64 -DSQISIGN_BUILD_TYPE_BROADWELL -DSQISIGN_GF_IMPL_BROADWELL -DSQISIGN_VARIANT=lvl1 -Drandombytes=OQS_randombytes -maes -mavx2
+    compile_opts: -DENABLE_SIGN -DMINI_GMP -DGMP_LIMB_BITS=64 -DHAVE_UINT128 -DRADIX_64 -DSQISIGN_BUILD_TYPE_BROADWELL -DSQISIGN_GF_IMPL_BROADWELL -DSQISIGN_VARIANT=lvl1 -DHAVE_RANDOMBYTES_NORETVAL -maes -mavx2
     signature_keypair: sqisign_lvl1_broadwell_sqisign_keypair
     signature_signature: sqisign_lvl1_broadwell_sqisign_sign_signature
     signature_verify: sqisign_lvl1_broadwell_sqisign_sign_verify
