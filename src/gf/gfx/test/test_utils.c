@@ -4,7 +4,7 @@
  */
 
 #include "test_utils.h"
-#include "rng.h"
+#include "randombytes.h"
 
 // Make n random-ish field elements (for tests only!).
 void

@@ -1,7 +1,7 @@
 
 #include "hnf_internal.h"
 #include "quaternion_tests.h"
-#include <rng.h>
+#include <randombytes.h>
 
 // test helper for xgcd_not_0
 
@@ -887,9 +887,13 @@ quat_test_ibz_mat_4xn_hnf_core_randomized(void)
     int det_non_0;
 
     for (int iter = 0; iter < 10; iter++) {
+#ifdef HAVE_RANDOMBYTES_NORETVAL
+        randombytes((unsigned char *)rand, sizeof(rand));
+#else
         int randret = randombytes((unsigned char *)rand, sizeof(rand));
         if (randret != 0)
             return 1;
+#endif
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 8; j++) {
@@ -954,11 +958,15 @@ quat_test_ibz_mat_4xn_hnf_mod_core_randomized(void)
         ibz_vec_4_init(&(generators[i]));
 
     for (int iter = 0; iter < 10; iter++) {
+#ifdef HAVE_RANDOMBYTES_NORETVAL
+        randombytes((unsigned char *)rand, sizeof(rand));
+#else
         randret = randombytes((unsigned char *)rand, sizeof(rand));
         if (randret != 0) {
             res = 1;
             goto end;
         }
+#endif
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 8; j++) {
                 ibz_set(&(generators[j][i]), rand[j][i]);
@@ -966,12 +974,16 @@ quat_test_ibz_mat_4xn_hnf_mod_core_randomized(void)
         }
         rand_m = 0;
         while (rand_m <= 0) {
+#ifdef HAVE_RANDOMBYTES_NORETVAL
+            randombytes((unsigned char *)&rand_m, sizeof(int32_t));
+#else
             randret = randombytes((unsigned char *)&rand_m, sizeof(int32_t));
             if (randret != 0) {
                 res = 1;
                 goto end;
             }
         }
+#endif
         ibz_set(&m, rand_m);
 
         ibz_mat_4xn_hnf_core(&cmp, 8, generators);

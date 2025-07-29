@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
-#ifndef rng_h
-#define rng_h
+#ifndef randombytes_h
+#define randombytes_h
+
+#include <stddef.h>
 
 #include <sqisign_namespace.h>
 
@@ -27,7 +29,7 @@ void randombytes_init(unsigned char *entropy_input,
  * @return int 0 on success, -1 otherwise
  */
 SQISIGN_API
-int randombytes_select(unsigned char *x, unsigned long long xlen);
+int randombytes_select(unsigned char *x, size_t xlen);
 
 /**
  * Random byte generation.
@@ -38,6 +40,6 @@ int randombytes_select(unsigned char *x, unsigned long long xlen);
  * @return int 0 on success, -1 otherwise
  */
 SQISIGN_API
-int randombytes(unsigned char *x, unsigned long long xlen);
+int randombytes(unsigned char *x, size_t xlen);
 
-#endif /* rng_h */
+#endif /* randombytes_h */

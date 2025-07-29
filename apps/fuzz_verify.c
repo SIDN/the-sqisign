@@ -7,7 +7,7 @@
 #include <string.h>
 
 #include <api.h>
-#include <rng.h>
+#include <randombytes.h>
 
 #include "encoded_sizes.h"
 

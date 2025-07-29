@@ -5,7 +5,7 @@
 #include "id2iso_tests.h"
 #include "dim2id2iso_tests.h"
 #include <hd.h>
-#include <rng.h>
+#include <randombytes.h>
 #include <bench_test_arguments.h>
 
 // run all tests in module

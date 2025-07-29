@@ -20,7 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-#include <rng.h>
+#include <randombytes.h>
 
 #ifdef ENABLE_CT_TESTING
 #include <valgrind/memcheck.h>
@@ -376,7 +376,7 @@ randombytes_js_randombytes_nodejs(void *buf, size_t n)
 
 SQISIGN_API
 int
-randombytes_select(unsigned char *buf, unsigned long long n)
+randombytes_select(unsigned char *buf, size_t n)
 {
 #if defined(__EMSCRIPTEN__)
     return randombytes_js_randombytes_nodejs(buf, n);
@@ -408,7 +408,7 @@ randombytes_select(unsigned char *buf, unsigned long long n)
 #ifdef RANDOMBYTES_SYSTEM
 SQISIGN_API
 int
-randombytes(unsigned char *x, unsigned long long xlen)
+randombytes(unsigned char *x, size_t xlen)
 {
 
     int ret = randombytes_select(x, (size_t)xlen);

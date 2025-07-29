@@ -1,5 +1,5 @@
 #include <quaternion.h>
-#include <rng.h>
+#include <randombytes.h>
 #include "internal.h"
 
 // helper functions

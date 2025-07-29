@@ -8,7 +8,7 @@
 #ifndef QUATERNION_H
 #define QUATERNION_H
 
-// #include <rng.h>
+// #include <randombytes.h>
 #include <sqisign_namespace.h>
 #include "intbig.h"
 #include <assert.h>

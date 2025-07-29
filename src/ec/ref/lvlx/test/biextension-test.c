@@ -5,7 +5,7 @@
 #include <tools.h>
 #include <mp.h>
 #include "biextension.h"
-#include <rng.h>
+#include <randombytes.h>
 #include <bench_test_arguments.h>
 
 void

@@ -3,7 +3,7 @@
 #include <inttypes.h>
 #include <assert.h>
 #include <tools.h>
-#include <rng.h>
+#include <randombytes.h>
 
 // Select a base change matrix in constant time, with M1 a regular
 // base change matrix and M2 a precomputed base change matrix

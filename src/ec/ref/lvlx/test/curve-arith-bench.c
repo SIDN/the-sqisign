@@ -7,7 +7,7 @@
 #include "test_extras.h"
 #include <ec.h>
 #include <isog.h>
-#include <rng.h>
+#include <randombytes.h>
 
 #define STRINGIFY2(x) #x
 #define STRINGIFY(x) STRINGIFY2(x)

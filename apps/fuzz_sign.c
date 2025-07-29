@@ -7,7 +7,7 @@
 #include <string.h>
 
 #include <api.h>
-#include <rng.h>
+#include <randombytes.h>
 
 /**
  * Example for SQIsign variant:

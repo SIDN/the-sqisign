@@ -1,6 +1,6 @@
 #include <bench.h>
 #include <bench_test_arguments.h>
-#include <rng.h>
+#include <randombytes.h>
 #include <id2iso.h>
 
 #define STRINGIFY2(x) #x

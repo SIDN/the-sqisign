@@ -32,7 +32,7 @@ protection within the United States.
 
 #include <string.h>
 
-#include <rng.h>
+#include <randombytes.h>
 #include "ctr_drbg.h"
 
 #ifdef ENABLE_CT_TESTING
@@ -69,7 +69,7 @@ randombytes_aes_ni(unsigned char *x, size_t xlen) {
 
 #ifdef RANDOMBYTES_AES_NI
 SQISIGN_API
-int randombytes(unsigned char *random_array, unsigned long long nbytes) {
+int randombytes(unsigned char *random_array, size_t nbytes) {
   int ret = randombytes_aes_ni(random_array, nbytes);
 #ifdef ENABLE_CT_TESTING
   VALGRIND_MAKE_MEM_UNDEFINED(random_array, ret);

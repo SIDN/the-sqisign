@@ -5,7 +5,7 @@
 #include <tools.h>
 #include <mp.h>
 #include "biextension.h"
-#include <rng.h>
+#include <randombytes.h>
 #include "bench.h"
 
 #define STRINGIFY2(x) #x

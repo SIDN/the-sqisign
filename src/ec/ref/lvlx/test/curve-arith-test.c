@@ -5,7 +5,7 @@
 #include "test_extras.h"
 #include <ec.h>
 #include <isog.h>
-#include <rng.h>
+#include <randombytes.h>
 #include <bench_test_arguments.h>
 
 /******************************

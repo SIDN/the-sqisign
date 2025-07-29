@@ -33,7 +33,7 @@ protection within the United States.
 */
 
 #include "api.h"
-#include "rng.h"
+#include "randombytes.h"
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -93,12 +93,12 @@ void output_rng(FILE *fp) {
   const char rng[] =
     "// SPDX-License-Identifier: Apache-2.0\n"
     "\n"
-    "#ifndef rng_h\n"
-    "#define rng_h\n"
+    "#ifndef randombytes.h\n"
+    "#define randombytes.h\n"
     "\n"
     "#include \"randombytes.h\"\n"
     "\n"
-    "#endif /* rng_h */\n";
+    "#endif /* randombytes.h */\n";
   
   fputs(rng, fp);
 }
@@ -245,11 +245,11 @@ int main(void) {
     randombytes(m1, MAX_MSG_LEN);
   }  
 
-  // Output rng.h
-  FILE *fp = fopen("src/pqm4/sqisign_" STRINGIFY(SQISIGN_VARIANT) "/ref/rng.h", "w");
+  // Output randombytes.h
+  FILE *fp = fopen("src/pqm4/sqisign_" STRINGIFY(SQISIGN_VARIANT) "/ref/randombytes.h", "w");
 
   if (!fp) {
-    printf("Couldn't open rng.h file for writing. Are you in the correct folder?\n");
+    printf("Couldn't open randombytes.h file for writing. Are you in the correct folder?\n");
     return KAT_FILE_OPEN_ERROR;
   }
 

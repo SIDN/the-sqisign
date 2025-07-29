@@ -168,7 +168,7 @@ void randombytes_init_arm64crypto(unsigned char *entropy_input,
 
 #define WAYS 4
 
-int randombytes_arm64crypto(unsigned char *x, unsigned long long xlen) {
+int randombytes_arm64crypto(unsigned char *x, size_t xlen) {
   uint8_t subkeys[15][16];
   unsigned char block[16];
   __uint128_t V[WAYS], Vle[WAYS];
@@ -259,7 +259,7 @@ int randombytes_arm64crypto(unsigned char *x, unsigned long long xlen) {
 }
 
 #ifdef RANDOMBYTES_ARM64CRYPTO
-int randombytes(unsigned char *random_array, unsigned long long nbytes) {
+int randombytes(unsigned char *random_array, size_t nbytes) {
   int ret = randombytes_arm64crypto(random_array, nbytes);
 #ifdef ENABLE_CT_TESTING
   VALGRIND_MAKE_MEM_UNDEFINED(random_array, ret);
