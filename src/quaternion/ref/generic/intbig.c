@@ -451,11 +451,15 @@ ibz_rand_interval(ibz_t *rand, const ibz_t *a, const ibz_t *b)
 #endif
 
     do {
+#ifdef HAVE_RANDOMBYTES_NORETVAL
+        randombytes((unsigned char *)r, len_bytes);
+#else
         randret = randombytes((unsigned char *)r, len_bytes);
         if (randret != 0) {
             ret = 0;
             goto err;
         }
+#endif
 #ifdef TARGET_BIG_ENDIAN
         for (size_t i = 0; i < len_limbs; ++i)
             r[i] = BSWAP_DIGIT(r[i]);

@@ -232,9 +232,13 @@ quat_test_randomized_ibz_cornacchia_prime(int bitsize, int n_bound, int iteratio
         // Sample small n for cornacchia
         rand_fact = 0;
         while (rand_fact < 1) {
+#ifdef HAVE_RANDOMBYTES_NORETVAL
+            randombytes((unsigned char *)&rand_fact, sizeof(int32_t));
+#else
             randret = randret | randombytes((unsigned char *)&rand_fact, sizeof(int32_t));
             if (randret != 0)
                 goto fin;
+#endif
             if (rand_fact < 0)
                 rand_fact = -rand_fact;
             rand_fact = rand_fact % n_bound;

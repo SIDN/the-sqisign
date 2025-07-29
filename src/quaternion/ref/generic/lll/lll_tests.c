@@ -466,6 +466,10 @@ quat_test_lll_randomized_lattice_lll(void)
     for (int iter = 0; iter < 20; iter++) {
         quat_alg_t alg;
         rand_denom = 0;
+#ifdef HAVE_RANDOMBYTES_NORETVAL
+        randombytes((unsigned char *)&rand_denom, sizeof(int32_t));
+        randombytes((unsigned char *)&rand_q, sizeof(uint32_t));
+#else
         while (rand_denom <= 0) {
             int randret = randombytes((unsigned char *)&rand_denom, sizeof(int32_t));
             if (randret != 0)
@@ -474,12 +478,17 @@ quat_test_lll_randomized_lattice_lll(void)
         int randret = randombytes((unsigned char *)&rand_q, sizeof(uint32_t));
         if (randret != 0)
             return 1;
+#endif
         // generate random invertible matrix
         ibz_set(&det, 0);
         while (ibz_is_zero(&det)) {
+#ifdef HAVE_RANDOMBYTES_NORETVAL
+            randombytes((unsigned char *)rand, sizeof(rand));
+#else
             randret = randombytes((unsigned char *)rand, sizeof(rand));
             if (randret != 0)
                 return 1;
+#endif
             for (int i = 0; i < 4; i++) {
                 for (int j = 0; j < 4; j++) {
                     ibz_set(&(lat.basis[i][j]), rand[j][i]);

@@ -39,7 +39,7 @@ implementations:
   - name: opt
     version: "not endorsed by sqisign or liboqs authors. https://github.com/SQISign/the-sqisign round 2 with SIDN Labs' patches for liboqs"
     folder_name: .
-    compile_opts: -DENABLE_SIGN -DMINI_GMP -DGMP_LIMB_BITS=64 -DHAVE_UINT128 -DRADIX_64 -DSQISIGN_BUILD_TYPE_OPT -DSQISIGN_GF_IMPL_REF -DSQISIGN_VARIANT=lvl1 -Drandombytes=OQS_randombytes
+    compile_opts: -DENABLE_SIGN -DMINI_GMP -DGMP_LIMB_BITS=64 -DHAVE_UINT128 -DRADIX_64 -DSQISIGN_BUILD_TYPE_OPT -DSQISIGN_GF_IMPL_REF -DSQISIGN_VARIANT=lvl1 -DHAVE_RANDOMBYTES_NORETVAL
     signature_keypair: sqisign_lvl1_opt_sqisign_keypair
     signature_signature: sqisign_lvl1_opt_sqisign_sign_signature
     signature_verify: sqisign_lvl1_opt_sqisign_sign_verify
